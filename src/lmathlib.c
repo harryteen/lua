@@ -212,6 +212,11 @@ static int math_randomseed (lua_State *L) {
 }
 
 
+static int math_test (lua_State *L) {
+  return 12;
+}
+
+
 static const luaL_Reg mathlib[] = {
   {"abs",   math_abs},
   {"acos",  math_acos},
@@ -241,6 +246,7 @@ static const luaL_Reg mathlib[] = {
   {"sqrt",  math_sqrt},
   {"tanh",   math_tanh},
   {"tan",   math_tan},
+  {"test",   math_test},
   {NULL, NULL}
 };
 
