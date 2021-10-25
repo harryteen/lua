@@ -276,7 +276,7 @@ static int math_integrate_g2s(ol_State *L){
 }
 
 static int math_integrate_reverse(ol_State *L){
-  ol_pushnumber(L, exp(absv(olL_checknumber(L,1))));
+  ol_pushnumber(L, exp(fabs(olL_checknumber(L,1))));
   return 1;
 }
 
@@ -286,12 +286,12 @@ static int math_integrate_exponential_e(ol_State *L){
 }
 
 static int math_integrate_exponential_a(ol_State *L){
-  ol_pushnumber(L,pow(olL_checknumber(L,1),olL_checknumber(L,2)) / ln(olL_checknumber(L,1)));
+  ol_pushnumber(L,pow(olL_checknumber(L,1),olL_checknumber(L,2)) / exp(olL_checknumber(L,1)));
   return 1;
 }
 
 static int math_integrate_exponential_ln(ol_State *L){
-  ol_pushnumber(L, olL_checknumber(L,1) * ln(olL_checknumber(L,1) - olL_checknumber(L,1)));
+  ol_pushnumber(L, olL_checknumber(L,1) * exp(olL_checknumber(L,1) - olL_checknumber(L,1)));
   return 1;
 }
 
