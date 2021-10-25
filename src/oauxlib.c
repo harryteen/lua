@@ -549,6 +549,13 @@ static int errfile (ol_State *L, const char *what, int fnameindex) {
 }
 
 
+const char *get_filename_ext(const char *filename) {
+    const char *dot = strrchr(filename, '.');
+    if(!dot || dot == filename) return "";
+    return dot + 1;
+}
+
+
 olLIB_API int olL_loadfile (ol_State *L, const char *filename) {
   LoadF lf;
   int status, readstatus;
@@ -561,20 +568,17 @@ olLIB_API int olL_loadfile (ol_State *L, const char *filename) {
   }
   else {
     ol_pushfstring(L, "@%s", filename);
-    char *fileformat;
-    char *format;
-    fileformat = strchr(filename,".");
-    if (!fileformat){
-      errfile(L,"OLang.FormatError: File Dosn't Has a Format");
+    if (!get_filename_ext(filename)){
+      errfile(L,"OLang.FormatError: File Dosn't Has a Format")
     }
     else{
-      format = fileformat + 1;
+      char format = get_filename_ext(filename);
       if (format == "ol" &&  format == "OL" && format == "Ol" && format == "oL"){
         lf.f = fopen(filename, "r");
         if (lf.f == NULL) return errfile(L, "OLang.OpenFileError: open", fnameindex);
       }
       else{
-        errfile(L,"OLang.FormatError: File Dosn't Has a Currect Format");
+        errfile(L,"OLang.FormatError: File Dosn't Has a Currect Format")
       }
 
     }
