@@ -24,7 +24,7 @@
 #define ol_tmpnam(b,e) { \
         strcpy(b, "/tmp/lua_XXXXXX"); \
         e = mkstemp(b); \
-        if (e != -1) close(e); \
+        if (e != -1) {close(e);} \
         e = (e == -1); }
 
 
