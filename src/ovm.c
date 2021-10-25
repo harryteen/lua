@@ -24,7 +24,7 @@
 #include "olstring.h"
 #include "oltable.h"
 #include "oltm.h"
-#include "olvm.h"
+#include "ovm.h"
 
 
 
