@@ -548,8 +548,8 @@ static int errfile (ol_State *L, const char *what, int fnameindex) {
   return ol_ERRFILE;
 }
 
-int EndsWithFoo(char *string );
-int EndsWithFoo( char *string )
+int EndsWithFoo(const char *string );
+int EndsWithFoo(const char *string )
 {
   string = strrchr(string, '.');
 
@@ -560,7 +560,7 @@ int EndsWithFoo( char *string )
 }
 
 
-olLIB_API int olL_loadfile (ol_State *L, char *filename) {
+olLIB_API int olL_loadfile (ol_State *L,const char *filename) {
   LoadF lf;
   int status, readstatus;
   int c;
