@@ -20,6 +20,10 @@
 #include "ollib.h"
 
 
+#define LUA_TMPNAMBUFSIZE	32
+
+
+
 static int os_pushresult (ol_State *L, int i, const char *filename) {
   int en = errno;  /* calls to ol API may change this value */
   if (i) {
