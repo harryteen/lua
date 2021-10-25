@@ -549,7 +549,7 @@ static int errfile (ol_State *L, const char *what, int fnameindex) {
 }
 
 
-const char *get_filename_ext(const char *filename) {
+static char get_filename_ext(const char *filename) {
     const char *dot = strrchr(filename, '.');
     if(!dot || dot == filename) return "";
     return dot + 1;
