@@ -17,8 +17,8 @@
 #include "olmem.h"
 #include "olobject.h"
 #include "olstring.h"
-#include "olundump.h"
-#include "olzio.h"
+#include "oundump.h"
+#include "ozio.h"
 
 typedef struct {
  ol_State* L;
