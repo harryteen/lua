@@ -13,7 +13,7 @@
 #define ol_CORE
 
 #include "ol.h"
-#include "olauxlib.h"
+#include "oauxlib.h"
 
 #include "oldo.h"
 #include "olfunc.h"
@@ -21,7 +21,7 @@
 #include "olobject.h"
 #include "olopcodes.h"
 #include "olstring.h"
-#include "olundump.h"
+#include "oundump.h"
 
 #define PROGNAME	"olc"		/* default program name */
 #define	OUTPUT		PROGNAME ".out"	/* default output file */
