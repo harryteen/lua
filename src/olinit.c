@@ -11,7 +11,7 @@
 #include "ol.h"
 
 #include "ollib.h"
-#include "olauxlib.h"
+#include "oauxlib.h"
 
 
 static const olL_Reg ollibs[] = {
