@@ -8,7 +8,7 @@
 #define olundump_h
 
 #include "olobject.h"
-#include "olzio.h"
+#include "ozio.h"
 
 /* load one chunk; from lundump.c */
 olI_FUNC Proto* olU_undump (ol_State* L, ZIO* Z, Mbuffer* buff, const char* name);
