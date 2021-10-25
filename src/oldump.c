@@ -13,7 +13,7 @@
 
 #include "olobject.h"
 #include "olstate.h"
-#include "olundump.h"
+#include "oundump.h"
 
 typedef struct {
  ol_State* L;
