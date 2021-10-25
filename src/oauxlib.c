@@ -551,7 +551,9 @@ static int errfile (ol_State *L, const char *what, int fnameindex) {
 
 static char get_filename_ext(const char *filename) {
     const char *dot = strrchr(filename, '.');
-    if(!dot || dot == filename) return "";
+    if(!dot || dot == filename){
+	    return NULL;
+    }
     return dot + 1;
 }
 
@@ -573,7 +575,7 @@ olLIB_API int olL_loadfile (ol_State *L, const char *filename) {
     }
     else{
       char format = get_filename_ext(filename);
-      if (format == "ol"){
+      if (format = "ol"){
         lf.f = fopen(filename, "r");
         if (lf.f == NULL) return errfile(L, "OLang.OpenFileError: open", fnameindex);
       }
