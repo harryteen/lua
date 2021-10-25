@@ -15,7 +15,7 @@
 
 #include "ol.h"
 
-#include "olapi.h"
+#include "oapi.h"
 #include "olcode.h"
 #include "oldebug.h"
 #include "oldo.h"
@@ -26,7 +26,7 @@
 #include "olstring.h"
 #include "oltable.h"
 #include "oltm.h"
-#include "olvm.h"
+#include "ovm.h"
 
 
 
