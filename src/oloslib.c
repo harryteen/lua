@@ -21,7 +21,11 @@
 
 
 #define ol_TMPNAMBUFSIZE	32
-
+#define lua_tmpnam(b,e) { \
+        strcpy(b, "/tmp/lua_XXXXXX"); \
+        e = mkstemp(b); \
+        if (e != -1) close(e); \
+        e = (e == -1); }
 
 
 static int os_pushresult (ol_State *L, int i, const char *filename) {
