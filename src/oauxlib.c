@@ -561,8 +561,23 @@ olLIB_API int olL_loadfile (ol_State *L, const char *filename) {
   }
   else {
     ol_pushfstring(L, "@%s", filename);
-    lf.f = fopen(filename, "r");
-    if (lf.f == NULL) return errfile(L, "OLang.OpenFileError: open", fnameindex);
+    char *fileformat;
+    char *format;
+    fileformat = strchr(filename,".");
+    if (!fileformat){
+      errfile(L,"OLang.FormatError: File Dosn't Has a Format");
+    }
+    else{
+      format = fileformat + 1;
+      if (format == "ol" &&  format == "OL" && format == "Ol" && format == "oL"){
+        lf.f = fopen(filename, "r");
+        if (lf.f == NULL) return errfile(L, "OLang.OpenFileError: open", fnameindex);
+      }
+      else{
+        errfile(L,"OLang.FormatError: File Dosn't Has a Currect Format");
+      }
+
+    }
   }
   c = getc(lf.f);
   if (c == '#') {  /* Unix exec. file? */
