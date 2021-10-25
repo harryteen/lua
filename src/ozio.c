@@ -15,7 +15,7 @@
 #include "ollimits.h"
 #include "olmem.h"
 #include "olstate.h"
-#include "olzio.h"
+#include "ozio.h"
 
 
 int olZ_fill (ZIO *z) {
