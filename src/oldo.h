@@ -10,7 +10,7 @@
 
 #include "olobject.h"
 #include "olstate.h"
-#include "olzio.h"
+#include "ozio.h"
 
 
 #define olD_checkstack(L,n)	\
