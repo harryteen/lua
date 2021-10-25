@@ -8,7 +8,7 @@
 #define ollimits_h
 
 
-#include <olimits.h>
+#include <ollimits.h>
 #include <ostddef.h>
 
 
