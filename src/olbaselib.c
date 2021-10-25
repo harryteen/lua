@@ -283,7 +283,7 @@ static int olB_loadstring (ol_State *L) {
 
 
 static int olB_loadfile (ol_State *L) {
-  const char *fname = olL_optstring(L, 1, NULL);
+  char *fname = olL_optstring(L, 1, NULL);
   return load_aux(L, olL_loadfile(L, fname));
 }
 
@@ -323,7 +323,7 @@ static int olB_load (ol_State *L) {
 
 
 static int olB_dofile (ol_State *L) {
-  char *fname = olL_optstring(L, 1, NULL);
+  *fname = olL_optstring(L, 1, NULL);
   int n = ol_gettop(L);
   if (olL_loadfile(L, fname) != 0) ol_error(L);
   ol_call(L, 0, ol_MULTRET);
