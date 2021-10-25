@@ -20,7 +20,7 @@
 #include "olobject.h"
 #include "olstate.h"
 #include "olstring.h"
-#include "olvm.h"
+#include "ovm.h"
 
 
 
