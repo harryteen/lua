@@ -11,10 +11,10 @@
 #define olmathlib_c
 #define ol_LIB
 
-#include "ool.h"
+#include "ol.h"
 
-#include "olauxlib.h"
-#include "oollib.h"
+#include "oauxlib.h"
+#include "ollib.h"
 
 
 #undef PI
