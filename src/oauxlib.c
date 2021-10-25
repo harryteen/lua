@@ -549,9 +549,14 @@ static int errfile (ol_State *L, const char *what, int fnameindex) {
 }
 
 
-static char get_filename_ext(const char *filename) {
-  char format = strtok(filename,".")[strlen(strtok(filename,"."))-1];
-  return format;
+int EndsWithFoo( char *string )
+{
+  string = strrchr(string, '.');
+
+  if( string != NULL )
+    return( strcmp(string, ".ol") );
+
+  return( -1 );
 }
 
 
@@ -567,12 +572,12 @@ olLIB_API int olL_loadfile (ol_State *L, const char *filename) {
   }
   else {
     ol_pushfstring(L, "@%s", filename);
-    if (!get_filename_ext(filename)){
+    if (EndsWithFoo(filename) != -1){
       errfile(L,"OLang.FormatError: File Dosn't Has a Format",fnameindex);
     }
     else{
-      char format = get_filename_ext(filename);
-      if (format = "ol"){
+      int format = EndsWithFoo(filename);
+      if (format = 0){
         lf.f = fopen(filename, "r");
         if (lf.f == NULL) return errfile(L, "OLang.OpenFileError: open", fnameindex);
       }
