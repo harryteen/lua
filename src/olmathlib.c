@@ -263,11 +263,11 @@ static int math_log_2(ol_State *L){
 }
 
 static float math_pi () {
-  return "3.14159265358979323846";
+  return (3.14159265358979323846);
 }
 
 static float math_e () {
-  return "2.718281828459045";
+  return (2.718281828459045);
 }
 
 static int math_integrate_g2s(ol_State *L){
@@ -276,17 +276,17 @@ static int math_integrate_g2s(ol_State *L){
 }
 
 static int math_integrate_reverse(ol_State *L){
-  ol_pushnumber(L, ln(absv(olL_checknumber(L,1))));
+  ol_pushnumber(L, exp(absv(olL_checknumber(L,1))));
   return 1;
 }
 
 static int math_integrate_exponential_e(ol_State *L){
-  ol_pushnumber(L, math_e() ** olL_checknumber(L,1));
+  ol_pushnumber(L, pow(math_e(),olL_checknumber(L,1)));
   return 1;
 }
 
 static int math_integrate_exponential_a(ol_State *L){
-  ol_pushnumber(L,(olL_checknumber(L,1)**olL_checknumber(L,2)) / ln(olL_checknumber(L,1)));
+  ol_pushnumber(L,pow(olL_checknumber(L,1),olL_checknumber(L,2)) / ln(olL_checknumber(L,1)));
   return 1;
 }
 
@@ -311,7 +311,7 @@ static int math_integrate_trigonometric_sin(ol_State *L){
 }
 
 static int math_integrate_pow(ol_State *L){
-  ol_pushnumber(L, ((olL_checknumber(L,1) ** (olL_checknumber(L,2))) + 1) / (olL_checknumber(L,2) + 1) );
+  ol_pushnumber(L, (pow(olL_checknumber(L,1) , (olL_checknumber(L,2))) + 1) / (olL_checknumber(L,2) + 1) );
   return 1;
 }
 
