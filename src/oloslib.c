@@ -21,8 +21,8 @@
 
 
 #include <unistd.h>
-#define LUA_TMPNAMBUFSIZE	32
-#define lua_tmpnam(b,e) { \
+#define ol_TMPNAMBUFSIZE	32
+#define ol_tmpnam(b,e) { \
         strcpy(b, "/tmp/lua_XXXXXX"); \
         e = mkstemp(b); \
         if (e != -1) close(e); \
