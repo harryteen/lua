@@ -26,9 +26,9 @@
 #include "olstring.h"
 #include "oltable.h"
 #include "oltm.h"
-#include "olundump.h"
-#include "olvm.h"
-#include "olzio.h"
+#include "oundump.h"
+#include "ovm.h"
+#include "ozio.h"
 
 
 
