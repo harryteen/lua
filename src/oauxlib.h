@@ -74,7 +74,7 @@ olLIB_API int (olL_checkoption) (ol_State *L, int narg, const char *def,
 olLIB_API int (olL_ref) (ol_State *L, int t);
 olLIB_API void (olL_unref) (ol_State *L, int t, int ref);
 
-olLIB_API int (olL_loadfile) (ol_State *L, const char *filename);
+olLIB_API int (olL_loadfile) (ol_State *L, char *filename);
 olLIB_API int (olL_loadbuffer) (ol_State *L, const char *buff, size_t sz,
                                   const char *name);
 olLIB_API int (olL_loadstring) (ol_State *L, const char *s);
