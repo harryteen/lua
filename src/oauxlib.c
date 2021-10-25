@@ -22,7 +22,7 @@
 
 #include "ol.h"
 
-#include "olauxlib.h"
+#include "oauxlib.h"
 
 
 #define FREELIST_REF	0	/* free list of references */
