@@ -8,7 +8,7 @@
 #define ollex_h
 
 #include "olobject.h"
-#include "olzio.h"
+#include "ozio.h"
 
 
 #define FIRST_RESERVED	257
