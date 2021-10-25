@@ -15,7 +15,7 @@
 
 #include "ol.h"
 
-#include "olauxlib.h"
+#include "oauxlib.h"
 #include "ollib.h"
 
 
