@@ -20,7 +20,7 @@
 #include "ollib.h"
 
 
-#define LUA_TMPNAMBUFSIZE	32
+#define ol_TMPNAMBUFSIZE	32
 
 
 
