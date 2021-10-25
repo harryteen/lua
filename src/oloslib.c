@@ -20,7 +20,6 @@
 #include "ollib.h"
 
 
-#if defined(LUA_USE_MKSTEMP)
 #include <unistd.h>
 #define LUA_TMPNAMBUFSIZE	32
 #define lua_tmpnam(b,e) { \
