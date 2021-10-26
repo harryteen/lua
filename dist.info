@@ -1,8 +1,0 @@
-name = "Owl"
-version = "1.0.0"
-dev-version = "1.0.0.39"
-desc = "OLang is a powerful,fast, and complete language."
-author = "Phoenix Tc."
-license = "PHX"
-url = "OLang"
-maintainer = "Phoenix"
